@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-1.11.1" level="application" />
+    <orderEntry type="library" name="Ranking.Products.0d855506" level="application" />
+    <orderEntry type="library" name="Ranking.Header.0bf862d1" level="application" />
+    <orderEntry type="library" name="Cropit.9e886d9d" level="application" />
+    <orderEntry type="library" name="FileReader.c560254d" level="application" />
+    <orderEntry type="library" name="Checkout.Message.27c4bc94" level="application" />
+    <orderEntry type="library" name="Product.Price.Coupon.6d2a6e58" level="application" />
+    <orderEntry type="library" name="Profile.Membership.Detail.9aade3e3" level="application" />
+    <orderEntry type="library" name="Coupon.648f157b" level="application" />
+    <orderEntry type="library" name="Order.Product.694bda5c" level="application" />
+    <orderEntry type="library" name="Reviews.FileReader.074657b7" level="application" />
+    <orderEntry type="library" name="Settings.Profile.FormGroup.b923170c" level="application" />
+    <orderEntry type="library" name="StarRating.e27e99f5" level="application" />
+    <orderEntry type="library" name="Product.Coupons.3bfc01ce" level="application" />
+    <orderEntry type="library" name="Product.Price.Minimize.d5ca57f9" level="application" />
+    <orderEntry type="library" name="ec" level="application" />
+    <orderEntry type="library" name="analytics" level="application" />
+    <orderEntry type="library" name="s.030a85b1" level="application" />
+    <orderEntry type="library" name="libs.2a9d3454" level="application" />
+    <orderEntry type="library" name="fbevents" level="application" />
+    <orderEntry type="library" name="iamport.payment-1.1.7" level="application" />
+    <orderEntry type="library" name="Tabs.a4fb08f2" level="application" />
+    <orderEntry type="library" name="Search.AutoComplete.b69171e1" level="application" />
+    <orderEntry type="library" name="Search.History.71c64d0d" level="application" />
+    <orderEntry type="library" name="postcode.v2" level="application" />
+    <orderEntry type="library" name="naverpay" level="application" />
+    <orderEntry type="library" name="bootpay-3.0.2" level="application" />
+    <orderEntry type="library" name="bootpay-3.0.6" level="application" />
+  </component>
+</module>

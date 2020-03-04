@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{Checkout.Message.27c4bc94, Coupon.648f157b, Cropit.9e886d9d, FileReader.c560254d, Order.Product.694bda5c, Product.Coupons.3bfc01ce, Product.Price.Coupon.6d2a6e58, Product.Price.Minimize.d5ca57f9, Profile.Membership.Detail.9aade3e3, Ranking.Header.0bf862d1, Ranking.Products.0d855506, Reviews.FileReader.074657b7, Search.AutoComplete.b69171e1, Search.History.71c64d0d, Settings.Profile.FormGroup.b923170c, StarRating.e27e99f5, Tabs.a4fb08f2, analytics, bootpay-3.0.2, bootpay-3.0.6, bootstrap, ec, fbevents, iamport.payment-1.1.7, jquery-1.11.1, libs.2a9d3454, naverpay, postcode.v2, s.030a85b1}" />
+  </component>
+</project>

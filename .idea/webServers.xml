@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5bb70b9e-7b7a-4c69-b5bc-a20936439403" name="DiceShot" url="http://10.211.55.16">
+        <fileTransfer host="10.211.55.16" port="22" rootFolder="/usr/local/apache-httpd/htdocs/DiceShot" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
