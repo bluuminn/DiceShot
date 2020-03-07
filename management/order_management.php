@@ -103,7 +103,7 @@ if ($total_page <= $end_page) {
             <div class="list-group">
                 <a href="product_management.php" class="list-group-item">상품 관리</a>
                 <a href="order_management.php" class="list-group-item active">주문 관리</a>
-                <a href="member_management.php" class="list-group-item">회원 관리</a>
+<!--                <a href="member_management.php" class="list-group-item">회원 관리</a>-->
             </div>
         </div>
         <div class="container">
