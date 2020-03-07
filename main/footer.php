@@ -91,7 +91,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="../index.html">Dice Shot</a>, All Rights
+                <p class="copyright font-alt">&copy; 2019&nbsp;<a href="../index_bk.html">Dice Shot</a>, All Rights
                     Reserved</p>
             </div>
             <div class="col-sm-6">

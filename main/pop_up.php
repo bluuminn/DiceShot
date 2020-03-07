@@ -9,14 +9,15 @@
 <p style="text-align: center;">
                 <span style="font-size: 14pt;">
                     <b>
-                        <span style="font-size: 24pt;">신규 입고</span>
+                        <span style="font-size: 24pt;">입고 알림</span>
                     </b>
                 </span>
 </p>
-<p style="text-align: center; line-height: 1.5; font-size: 20px"><br/>
-    다이스샷 판매량 1위! <br/><br/>
+<p style="text-align: center; line-height: 1.5; font-size: 25px"><br/>
+    다이스샷 판매량 1위!</p>
+<p style="text-align: center; font-size: 20px">
     루미큐브 클래식이 입고되었습니다.<br/><br/>
-    감사합니다.<br/>
+    감사합니다.<br/><br/>
 </p>
 <p><br/>
 </p>

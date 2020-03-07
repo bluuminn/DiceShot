@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="20adc257-3980-4927-b834-ca583e738800" name="root" url="http://10.211.55.16">
+        <fileTransfer host="10.211.55.16" port="22" rootFolder="/usr/local/apache-httpd/htdocs" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

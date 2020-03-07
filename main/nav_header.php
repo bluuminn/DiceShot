@@ -122,7 +122,7 @@ $hot_url = '../product/product_list.php?cate_no=300';
                                 <ul class="dropdown-menu">
                                     <li><a href="../management/product_management.php">상품 관리</a></li>
                                     <li><a href="../management/order_management.php">주문 관리</a></li>
-                                    <li><a href="../management/member_management.php">회원 관리</a></li>
+<!--                                    <li><a href="../management/member_management.php">회원 관리</a></li>-->
                                 </ul>
                             </li>
                         <? } ?>
@@ -134,8 +134,8 @@ $hot_url = '../product/product_list.php?cate_no=300';
 
                             <ul class="dropdown-menu">
                                 <li><a href="../mypage/orderlist.php">주문 내역</a></li>
-                                <li><a href="../mypage/wishlist.php">관심 상품</a></li>
-                                <li><a href="../mypage/modify_info.php">내 정보 수정</a></li>
+<!--                                <li><a href="../mypage/wishlist.php">관심 상품</a></li>-->
+<!--                                <li><a href="../mypage/modify_info.php">내 정보 수정</a></li>-->
                                 <li><a href="../member/sign_out.php">로그아웃</a></li>
                             </ul>
 

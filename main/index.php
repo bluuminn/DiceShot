@@ -110,7 +110,7 @@ include("../main/nav_header.php");
 
 
             <?
-            $query = "select * from product where sales>=3 order by sales desc";
+            $query = "select * from product where sales>=5 order by sales desc";
             $result = mysqli_query($connect, $query);
             $total = mysqli_num_rows($result);
 
