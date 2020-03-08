@@ -103,7 +103,7 @@ if ($total_page <= $end_page) {
             <div class="list-group">
                 <a href="product_management.php" class="list-group-item">상품 관리</a>
                 <a href="order_management.php" class="list-group-item active">주문 관리</a>
-<!--                <a href="member_management.php" class="list-group-item">회원 관리</a>-->
+                <!--                <a href="member_management.php" class="list-group-item">회원 관리</a>-->
             </div>
         </div>
         <div class="container">
@@ -212,7 +212,15 @@ if ($total_page <= $end_page) {
                             </td>
 
                             <td style="vertical-align: middle">
-                                <?= number_format($total_price) ?>
+                                <?
+                                // 총 가격이 3만원 미만이면 배송비 2500원 추가
+                                if ($total_price < 30000) {
+                                    $shipping = 2500;
+                                } else {
+                                    $shipping = 0;
+                                }
+                                echo number_format($total_price + $shipping);
+                                ?>
                             </td>
 
                             <td style="vertical-align: middle">
