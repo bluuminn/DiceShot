@@ -104,18 +104,18 @@ if ($total_page <= $end_page) {
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 
-    function change_status() {
+    function change_status(order_id) {
         //TODO: 컨펌창 띄워서 구매 확정 여부 물어보기
         // 1. 구매확정: progress_status 배송중 > 배송완료 수정
         // 2. 취소: 돌아가기
         // 3. 예외: 7일 지나면 자동으로 배송완료로 수정하기 (이건 보류)
 
         // order_no = order_no.stringify(order_no);
-        alert("order_no: " + order_no);
+        // alert("order_id: " + order_id);
         var conf = confirm("상품을 수령하셨나요? 구매확정 처리 하시겠어요?");
         if (conf) {
-            alert('confirm ck');
-            post_to_url('./change_delivery_status.php', {"order_no": order_no});
+            // alert('confirm ck');
+            post_to_url('./change_delivery_status.php', {"order_id": order_id});
 
         } else {
             return;
@@ -317,12 +317,13 @@ if ($total_page <= $end_page) {
                                             <tr>
                                                 <td>
                                                     <? if ($order['progress_status'] == '배송중') { ?>
+
                                                         <input class="btn btn-primary btn-round order_button"
                                                                size="10" value="구매확정"
-                                                               onclick="change_status()">
+                                                               onclick="change_status(<?= $order['id']; ?>)">
                                                     <? } ?>
                                                     <script>
-                                                        var order_no = "<?= $order['order_no'] ?>";
+                                                        //var order_no = "<?//= $order['order_no'] ?>//";
                                                         // alert('test: ' + test)
                                                     </script>
                                                 </td>

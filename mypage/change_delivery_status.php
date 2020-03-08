@@ -5,9 +5,9 @@ include("../main/nav_header.php");
 
 
 // 주문 번호 가져오기
-$order_no = $_POST['order_no'];
+$order_id = $_POST['order_id'];
 
-$get_order_query = "select * from order_info where order_no='{$order_no}'";
+$get_order_query = "select * from order_info where order_no='{$order_id}'";
 $get_order_result = mysqli_query($connect, $get_order_query);
 if ($get_order_result) {
     $order = mysqli_fetch_assoc($get_order_result);
@@ -17,7 +17,7 @@ if ($get_order_result) {
 
 $status = "구매확정";
 
-$status_update_query = "UPDATE order_info SET progress_status='{$status}' WHERE order_no='{$order_no}'";
+$status_update_query = "UPDATE order_info SET progress_status='{$status}' WHERE id='{$order_id}'";
 $status_update_result = mysqli_query($connect, $status_update_query);
 
 if (!$status_update_result) {

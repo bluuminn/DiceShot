@@ -119,7 +119,7 @@ if ($total_page <= $end_page) {
                     <td width="200">주문상품정보</td>
                     <td width="100">결제금액</td>
                     <td width="100">주문상태</td>
-                    <td width="60">관리</td>
+                    <td width="60">출고상태</td>
                 </tr>
 
                 <?
@@ -230,14 +230,18 @@ if ($total_page <= $end_page) {
 
                             <td style="vertical-align: middle">
 
-                                <? if ($order['progress_status'] != "배송중") { ?>
+                                <? if ($order['progress_status'] == "결제완료") { ?>
                                     <button class="btn btn-success btn-round order_button"
                                             size="5" onclick="order(<?= $order['id']; ?>);" data-toggle="modal"
                                             data-target="#insertBlack"
                                             data-notifyid=<?= $order['order_no']; ?> data-nonnotifyid="${list.NONNOTIFYID}"
                                             data-ncontent="${list.NCONTENT }">출고
                                     </button>
-                                <? } ?>
+                                <? } else { ?>
+                                    <font color=red>출고 완료</font><br/>
+                                    송장번호:
+                                    <? echo $order['invoice'];
+                                } ?>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="insertBlack" tabindex="-1" role="dialog"

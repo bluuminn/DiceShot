@@ -77,6 +77,7 @@ $member_session_id = $_SESSION['member_uuid'];
             $('input[name=postcode]').val("");
             $('input[name=address]').val("");
             $('input[name=detailAddress]').val("");
+            $('input[name=extraAddress]').val("");
             $('input[name=recipient_name]').val("");
             $('input[name=first_num]').val("");
             $('input[name=middle_num]').val("");
@@ -86,14 +87,14 @@ $member_session_id = $_SESSION['member_uuid'];
         } else {
 
             <?
-            $phone_array = explode('-', $member_info['phone_number']);
-            $first_num = $phone_array[0];
-            $middle_num = $phone_array[1];
-            $last_num = $phone_array[2];
-
-            $addr_array = explode('+', $member_info['address1']);
-            $addr = $addr_array[0];
-            $extraAddr = $addr_array[0];
+//            $phone_array = explode('-', $member_info['phone_number']);
+//            $first_num = $phone_array[0];
+//            $middle_num = $phone_array[1];
+//            $last_num = $phone_array[2];
+//
+//            $addr_array = explode('+', $member_info['address1']);
+//            $addr = $addr_array[0];
+//            $extraAddr = $addr_array[0];
             ?>
 
             //input에 name으로 접근해서 값 세팅(배송 정보 초기화)

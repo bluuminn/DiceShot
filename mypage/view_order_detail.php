@@ -53,7 +53,7 @@ if ($order_products_result) {
                     <td width="200">판매가</td>
                     <td width="200">상품수량</td>
                     <td width="200">합계</td>
-                    <td width="200"></td>
+                    <td width="200">주문 상태</td>
                 </tr>
 
 
@@ -104,22 +104,27 @@ if ($order_products_result) {
 
                         <td style="vertical-align: middle">
                             <?
-                            if ($products_list['is_review']) { ?>
-                                <input class="btn btn-border-d btn-round" style="padding: 5px 10px" size="10"
-                                       type="button" value="리뷰 보기">
-
-                            <? } else { ?>
-                                <form action="create_review.php" method="post">
-                                    <input class="btn btn-success btn-round" style="padding: 5px 10px" size="10"
-                                           type="submit" value="리뷰 작성">
-                                    <input type="hidden" name="order_no" value="<?= $order['order_no'] ?>">
-                                    <input type="hidden" name="product_id" value="<?= $products_list['product_id'] ?>">
-                                    <!--                                    주문된 상품 테이블의 아이디-->
-                                    <input type="hidden" name="ordered_product_id" value="<?= $products_list['id'] ?>">
-                                </form>
+                            if ($order['progress_status'] == "구매확정") { ?>
+                                <font color="blue"><?= $order['progress_status'] ?></font>
                                 <?
-                            }
-                            ?>
+                                if ($products_list['is_review']) { ?>
+                                    <input class="btn btn-border-d btn-round" style="padding: 5px 10px" size="10"
+                                           type="button" value="리뷰 보기">
+                                <? } else { ?>
+                                    <form action="create_review.php" method="post">
+                                        <input class="btn btn-success btn-round" style="padding: 5px 10px" size="10"
+                                               type="submit" value="리뷰 작성">
+                                        <input type="hidden" name="order_no" value="<?= $order['order_no'] ?>">
+                                        <input type="hidden" name="product_id"
+                                               value="<?= $products_list['product_id'] ?>">
+                                        <!--                                    주문된 상품 테이블의 아이디-->
+                                        <input type="hidden" name="ordered_product_id"
+                                               value="<?= $products_list['id'] ?>">
+                                    </form>
+                                <? }
+                            } else { ?>
+                                <font color="red"><?= $order['progress_status'] ?></font>
+                            <? } ?>
                         </td>
                         <!--                                        <td class="pr-remove" style="vertical-align: middle">-->
                         <!--                                            <a href="#" title="Remove">-->
@@ -227,7 +232,7 @@ if ($order_products_result) {
 
                 <script>
                     function back() {
-                        location.href='./orderlist.php';
+                        location.href = './orderlist.php';
                     }
                 </script>
             </div>
