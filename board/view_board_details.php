@@ -85,7 +85,7 @@ if (!$result) {
                                        style="margin-top: 10px">
                             </a>
 
-                            <a href="./create_post.php">
+                            <a href="./create_post.php?cs_no=1&modify_id=<?= $post['id'] ?>">
                                 <input class="btn btn-g btn-round" type="button" value="수정"
                                        style="margin-top: 10px">
                             </a>
@@ -100,7 +100,7 @@ if (!$result) {
                                        style="margin-top: 10px">
                             </a>
 
-                            <a href="./create_post.php?cs_no=2&modify_id=<?= $post['id'] ?>">
+                            <a href="./create_post.php?cs_no=<?= $post['category']?>&modify_id=<?= $post['id'] ?>">
                                 <input class="btn btn-g btn-round" type="button" value="수정"
                                        style="margin-top: 10px">
                             </a>
