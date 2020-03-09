@@ -210,7 +210,8 @@ if ($total_page <= $end_page) {
                             // 상품 가져오는 쿼리 성공하면
                             if ($get_product_result) {
                                 $product = mysqli_fetch_assoc($get_product_result);
-                                $total_price += $product['price'];
+                                $payment_amount = $product['price'] * $product_id['amount'];
+                                $total_price += $payment_amount;
                             }
                         }
 

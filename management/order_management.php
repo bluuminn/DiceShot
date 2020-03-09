@@ -136,6 +136,7 @@ if ($total_page <= $end_page) {
                     while ($order = mysqli_fetch_assoc($get_show_data_result)) {
 
                         $total_price = 0;
+                        $payment_amount = 0;
 
                         // 주문번호로 주문상품테이블에서 상품리스트를 가져옴
                         $get_product_list_query = "select * from ordered_product where order_no='{$order['order_no']}' order by id desc";
@@ -143,7 +144,6 @@ if ($total_page <= $end_page) {
 
                         // 주문 번호별 주문 상품 개수
                         $product_cnt = mysqli_num_rows($get_product_list_result);
-
 
                         // 주문번호로 주문상품테이블에서 상품리스트를 잘 가져왔으면...
                         if ($get_product_list_result) {
@@ -157,7 +157,8 @@ if ($total_page <= $end_page) {
                                 // 상품 가져오는 쿼리 성공하면
                                 if ($get_product_result) {
                                     $product = mysqli_fetch_assoc($get_product_result);
-                                    $total_price += $product['price'];
+                                    $payment_amount = $product['price'] * $product_id['amount'];
+                                    $total_price += $payment_amount;
                                 }
                             }
                         }
