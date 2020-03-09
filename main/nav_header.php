@@ -116,7 +116,7 @@ $hot_url = '../product/product_list.php?cate_no=300';
                         if ($_SESSION['member_email'] == 'adming') { ?>
 
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="../mypage/orderlist.php" data-toggle="dropdown">
+                                <a class="dropdown-toggle" href="../management/product_management.php" data-toggle="dropdown">
                                     manage
                                 </a>
                                 <ul class="dropdown-menu">
