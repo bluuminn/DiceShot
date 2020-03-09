@@ -223,12 +223,22 @@ if ($total_page <= $end_page) {
                         <div class="col-sm-12">
                             <ul class="pagination" style="margin-top: 140px">
                                 <?
-                                if ($now_block > 1) {
-                                    ?>
+                                if ($now_block > 1) { ?>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                           href="<?= $_SERVER['PHP_SELF'] ?>?cs_no=<?= $cs_no ?>&page=1">처음</a>
+                                    </li>
                                     <li class="page-item">
                                         <a class="page-link"
                                            href="<?= $_SERVER['PHP_SELF'] ?>?cs_no=<?= $cs_no ?>&page=<?= $start_page - 1 ?>">이전</a>
                                     </li>
+                                <? } else { ?>
+<!--                                    <li class="page-item">-->
+<!--                                        <a class="page-link">처음</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="page-item">-->
+<!--                                        <a class="page-link">이전</a>-->
+<!--                                    </li>-->
                                     <?
                                 }
                                 for ($p = $start_page; $p <= $end_page; $p++) {
@@ -247,11 +257,24 @@ if ($total_page <= $end_page) {
                                     }
                                 }
 
+                                // 총 블럭(1~5/6~10/11~15 ..)수가 현재 블럭 수보다 작을 경우
                                 if ($now_block < $total_block) { ?>
                                     <li class="page-item">
                                         <a class="page-link"
                                            href="<?= $_SERVER['PHP_SELF'] ?>?cs_no=<?= $cs_no ?>&page=<?= $end_page + 1 ?>">다음</a>
                                     </li>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                           href="<?= $_SERVER['PHP_SELF'] ?>?cs_no=<?= $cs_no ?>&page=<?= $total_page ?>">마지막</a>
+                                    </li>
+
+                                <? } else { ?>
+<!--                                    <li class="page-item">-->
+<!--                                        <a class="page-link">다음</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="page-item">-->
+<!--                                        <a class="page-link">마지막</a>-->
+<!--                                    </li>-->
                                 <? } ?>
                             </ul>
                         </div>
