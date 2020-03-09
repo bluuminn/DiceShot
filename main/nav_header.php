@@ -5,6 +5,7 @@ session_start();
 // db 연결
 include("../main/db_connection.php");
 
+date_default_timezone_set('Asia/Seoul');
 
 if (isset($_COOKIE['auto_login_member_uuid'])) {
     $get_member_query = "select * from member where uuid='{$_COOKIE['auto_login_member_uuid']}'";

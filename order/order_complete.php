@@ -60,11 +60,13 @@ if (!$result) {
     echo "<script>alert('업데이트쿼리: '+'{$member_update_query}')</script>";
 }
 
-$get_order_info_query = "select * from order_info";
+$get_order_info_query = "select * from order_info where date(order_date) >= date(subdate(now(), interval 1 day)) and date(order_date) <= date(now());";
 $get_order_info_result = mysqli_query($connect, $get_order_info_query);
-$order_count = mysqli_num_rows($get_order_info_result);
-$order_count += 1;
-$order_count = sprintf('%06d', $order_count);
+if ($get_order_info_result){
+    $order_count = mysqli_num_rows($get_order_info_result);
+    $order_count += 1;
+    $order_count = sprintf('%06d', $order_count);
+}
 
 // 주문번호
 $order_no = date("Ymd") . '-' . $order_count;
