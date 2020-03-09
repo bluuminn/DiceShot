@@ -24,7 +24,7 @@ $keyword = $_GET['keyword'];
     <!--    <hr class="divider-w" style="margin-top: 30px">-->
 
     <?
-    $query = "select * from product where title like '%$keyword%' order by id desc";
+    $query = "select * from product where title like '%$keyword%' or eng_title like '%$keyword%' order by id desc";
     //    $query = mysqli_query("select * from product where title like '%$keyword%' order by id desc");
     $result = mysqli_query($connect, $query);
     $total = mysqli_num_rows($result);
